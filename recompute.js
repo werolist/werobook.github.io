@@ -77,6 +77,9 @@ const valids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
 const valids_set = new Set(valids)
 const valids_len = valids.length;
 
+/* I have of course omitted a lot of the code I deemed irrelevant to you. It is of course there on the repository if you want a full look. I have omitted the ENTIRE real-time-updating logic here because I won't subject you to browser-facing js. AND! YOU MADE FUN OF ME FOR ASKING PERMISSION TO LOOK AT THE SITE. IT IS BECAUSE */
+
+/* While unicode exists all the way form id 0 up to id 1114111 (~17 * 2^16), not all of it has been assigned yet. Less than a sixth in fact is assigned. So it is a high probability that whenever a character is decoded with a wrong key, it will get mapped to a nonexist codepoint, which will just result in that ugly empty character that we get made fun of for on android. This one replaces them by deterministically mapping each of them to a valid unicode. Doesn't matter that it will be a "wrong" (I spelled it werong while typing lmao) character, because it's all gibberish anyway since your key is wrong and Raju grows more impatient. */
 function replace_if_invalid(x) {
     if (!valids_set.has(x)) {
         let valid_index = Math.abs(x % valids_len);
@@ -119,6 +122,7 @@ function chrlist_to_str(chrlist) {
     return chrlist.join('');
 }
 
+/* This is where I combine the 4 keys to come up with the final, really long key. Basically, while there's more than one key left, I pop out the last two, take their Cartesian product (lot simpler than it sounds), and multiply the pairs and add 1 (adding 1 prevents trivially reverting them by getting their prime factors). So when we have as many as 4 keys, the final key numbers get really big and arbitrary-looking and the key gets really long. */
 function combine_keys(keys) {
     while (keys.length > 1) {
         let last_key = keys.pop();
@@ -135,6 +139,16 @@ function combine_keys(keys) {
     return keys[0];
 }
 
+/* This is the encryption/decryption algorithm! It is a variation on the Vigenere cipher, which is magnitudes stronger than the Caesar cipher, but of course, considering Caesar died like 2500 years ago, "stronger than Caesar cipher" basically means nothing. Today, cryptography tools can break Vigenere within seconds, certainly under a minute, by comparing the cipher (the gibberish) with known statistics about real-world languages, such as how often letters and words occur. These statistics survive A LOT of obfuscation, so they are apparent even after so much substituion.
+
+First, Vigenere. You can look it up obviously but it's simple enough. In Caesar, you add every character with the same fixed character. In Vigenere, you have a "key", which is a sequence of characters let's say "R y f a". You align this key with the message, and if it is shorter, you repeat it like "R y f a R y ..", and then you add them element-wise. BUT! Having a short key is even more insecure than Vigenere already is, because you can look for every m << length_of(message), and subtract pieces of m-length to get a sense of the key using known statistics as I said. So, here, I use the original short keys (the riddle answers) to produce a random-looking (but obviously far from random, hence not truly secure, just a bit more annoying for whoever wants to break it directly) sequence of characters as long as the message, and then offset. And the variable `start` here is just another piece of annoyance, it makes it so that depending pseudo-randomly (like before) on the length of the message itself, it shifts the start of the cipher, for example to "f a R y f a ..".
+
+And decryption, of course, is to try and *subtract* instead of add when given the keys. hence the `sign` argument.
+
+OH! And isn't it oh so cool that the riddles reveal themselves in pieces before the rest of the text! It was somewhat simple. When I combine my keys (riddle answers), I only use the first m keys to encrypt the m+1th element. But, sadly, this eats up whatever little security the key-combination-alt-vigenere offered to begin with, because it means the second riddle (the first early-reveal question) is encrypted with just the first key, which is pretty much standard Vigenere.
+
+THEREFORE, this is not really "secure". Anyone annoying enough and with an evening to spare can undo this pretty trivially. Plaintext ciphers with non-random keys haven't really been secure since like WW1 (because well, cryptography and computation underwent like 5000 civ gamesteps during the world-war years). If you want, you can look up the wiki for the One-Time Pad (I learned about it like 3 days ago lol) where they explain a lot of issues with plaintext ciphers, it's kindof cool.
+*/
 function alt_vignere(ord_text, ord_key, sign = 1) {
     let keylen = ord_key.length;
     let start = (ord_text.length ** 3) % keylen;
