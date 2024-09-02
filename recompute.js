@@ -1,8 +1,5 @@
 const all_eles = document.getElementsByTagName("*");
 
-all = document.getElementById("h");
-all.hidden = false;
-
 const exempts = ["1", "i1", "i2", "i3", "h"];
 const all_tags = ["p", "h1", "h2", "h3", "summary", "code", "title", "a"];
 
