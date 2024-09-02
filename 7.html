@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html class="light" dir="ltr" lang="en">
+ <head>
+  <!-- Book generated using mdBook -->
+  <meta charset="utf-8"/>
+  <title ords="[113018470, 133692593, 137827399, 139205835, 150231790, 139205619, 151610063, 139205646, 158501507, 101918484, 120562081, 124290733, 125533719, 135476966, 125533640, 136719887, 125533712, 142934407, 101918407, 120562051, 124290815, 125533705, 135476979, 125533723]">
+  </title>
+  <!-- Custom HTML head -->
+  <meta content="" name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#ffffff" name="theme-color"/>
+  <link href="favicon.svg" rel="icon"/>
+  <link href="favicon.png" rel="shortcut icon"/>
+  <link href="css/variables.css" rel="stylesheet"/>
+  <link href="css/general.css" rel="stylesheet"/>
+  <link href="css/chrome.css" rel="stylesheet"/>
+  <link href="css/print.css" media="print" rel="stylesheet"/>
+  <!-- Fonts -->
+  <link href="FontAwesome/css/font-awesome.css" rel="stylesheet"/>
+  <link href="fonts/fonts.css" rel="stylesheet"/>
+  <!-- Highlight.js Stylesheets -->
+  <link href="highlight.css" rel="stylesheet"/>
+  <link href="tomorrow-night.css" rel="stylesheet"/>
+  <link href="ayu-highlight.css" rel="stylesheet"/>
+  <!-- Custom theme stylesheets -->
+ </head>
+ <body class="sidebar-visible no-js">
+  <div id="body-container">
+   <!-- Provide site root to javascript -->
+   <script>
+    var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+   </script>
+   <!-- Work around some values being stored in localStorage wrapped in quotes -->
+   <script>
+    try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+   </script>
+   <!-- Set the theme before any content is loaded, prevents flash -->
+   <script>
+    var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+   </script>
+   <input class="hidden" id="sidebar-toggle-anchor" type="checkbox"/>
+   <!-- Hide / unhide sidebar before it is displayed -->
+   <script>
+    var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+   </script>
+   <nav aria-label="Table of contents" class="sidebar" id="sidebar">
+    <div class="sidebar-scrollbox">
+     <ol class="chapter">
+      <li class="chapter-item expanded">
+       <a href="0.html">
+        <strong aria-hidden="true">
+         1.
+        </strong>
+        Welcome!
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="1.html">
+        <strong aria-hidden="true">
+         2.
+        </strong>
+        To boot
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="2.html">
+        <strong aria-hidden="true">
+         3.
+        </strong>
+        Koniec Lata
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="3.html">
+        <strong aria-hidden="true">
+         4.
+        </strong>
+        Nie Potrzeba
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="4.html">
+        <strong aria-hidden="true">
+         5.
+        </strong>
+        Pokaż
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="5.html">
+        <strong aria-hidden="true">
+         6.
+        </strong>
+        Kocham
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="6.html">
+        <strong aria-hidden="true">
+         7.
+        </strong>
+        Miraże
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a class="active" href="7.html">
+        <strong aria-hidden="true">
+         8.
+        </strong>
+        Sobą
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="8.html">
+        <strong aria-hidden="true">
+         9.
+        </strong>
+        Urke
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="9.html">
+        <strong aria-hidden="true">
+         10.
+        </strong>
+        Małom
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="10.html">
+        <strong aria-hidden="true">
+         11.
+        </strong>
+        Ostatnia
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="11.html">
+        <strong aria-hidden="true">
+         12.
+        </strong>
+        Eldorado
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="12.html">
+        <strong aria-hidden="true">
+         13.
+        </strong>
+        Byłomine
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="13.html">
+        <strong aria-hidden="true">
+         14.
+        </strong>
+        Krawędzi
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="14.html">
+        <strong aria-hidden="true">
+         15.
+        </strong>
+        Długość
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="15.html">
+        <strong aria-hidden="true">
+         16.
+        </strong>
+        Peron
+       </a>
+      </li>
+      <li class="chapter-item expanded">
+       <a href="16.html">
+        <strong aria-hidden="true">
+         17.
+        </strong>
+        Postscript
+       </a>
+      </li>
+     </ol>
+    </div>
+    <div class="sidebar-resize-handle" id="sidebar-resize-handle">
+     <div class="sidebar-resize-indicator">
+     </div>
+    </div>
+   </nav>
+   <!-- Track and set sidebar scroll position -->
+   <script>
+    var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+   </script>
+   <div class="page-wrapper" id="page-wrapper">
+    <div class="page">
+     <div id="menu-bar-hover-placeholder">
+     </div>
+     <div class="menu-bar sticky" id="menu-bar">
+      <div class="left-buttons">
+       <label aria-controls="sidebar" aria-label="Toggle Table of Contents" class="icon-button" for="sidebar-toggle-anchor" id="sidebar-toggle" title="Toggle Table of Contents">
+        <i class="fa fa-bars">
+        </i>
+       </label>
+       <button aria-controls="theme-list" aria-expanded="false" aria-haspopup="true" aria-label="Change theme" class="icon-button" id="theme-toggle" title="Change theme" type="button">
+        <i class="fa fa-paint-brush">
+        </i>
+       </button>
+       <ul aria-label="Themes" class="theme-popup" id="theme-list" role="menu">
+        <li role="none">
+         <button class="theme" id="light" role="menuitem">
+          Light
+         </button>
+        </li>
+        <li role="none">
+         <button class="theme" id="rust" role="menuitem">
+          Rust
+         </button>
+        </li>
+        <li role="none">
+         <button class="theme" id="coal" role="menuitem">
+          Coal
+         </button>
+        </li>
+        <li role="none">
+         <button class="theme" id="navy" role="menuitem">
+          Navy
+         </button>
+        </li>
+        <li role="none">
+         <button class="theme" id="ayu" role="menuitem">
+          Ayu
+         </button>
+        </li>
+       </ul>
+       <button aria-controls="searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-label="Toggle Searchbar" class="icon-button" id="search-toggle" title="Search. (Shortkey: s)" type="button">
+        <i class="fa fa-search">
+        </i>
+       </button>
+      </div>
+      <h1 class="menu-title" ords="[116267833, 111870498, 132334591, 136427402, 137791606, 148705869, 137791676, 150070063, 137791690, 156891500, 100883226, 119337387, 123028272, 124258597, 134100836, 124258598, 135331136]">
+      </h1>
+      <div class="right-buttons">
+       <a aria-label="Print this book" href="print.html" title="Print this book">
+        <i class="fa fa-print" id="print-button">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="hidden" id="search-wrapper">
+      <form class="searchbar-outer" id="searchbar-outer">
+       <input aria-controls="searchresults-outer" aria-describedby="searchresults-header" id="searchbar" name="searchbar" placeholder="Search this book ..." type="search"/>
+      </form>
+      <div class="searchresults-outer hidden" id="searchresults-outer">
+       <div class="searchresults-header" id="searchresults-header">
+       </div>
+       <ul id="searchresults">
+       </ul>
+      </div>
+     </div>
+     <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+     <script>
+      document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+     </script>
+     <div class="content" id="content">
+      <main>
+       <all hidden="" id="h">
+        <h1 id="sobą" ords="[99733641, 102818212, 103846380, 112071991]">
+        </h1>
+        <p ords="[142438117, 146843412, 148311832, 160059459, 148311766, 161527704, 148311766, 168869912, 108585489, 128448670, 132421311, 133745520, 144339141, 133745518, 145663437, 133745445, 152284483, 108585490, 128448681, 132421316, 133745445, 144339214, 133745523, 145663353, 133745525, 152284482, 107510397, 127176900, 131110202, 132421301, 142910126, 132421310, 144221232, 132421234, 150776735, 94664842, 111981573, 115444905, 116599281, 125834942, 116599354, 126989395, 116599346, 132761901, 127740440, 151107518, 155780933, 157338826, 169801286, 157338811, 171359023, 157338813, 179148153, 115194542, 136266603, 140481117, 141885912, 153124399, 141885919, 154529216, 141885843, 161553268, 115194536, 136266603, 140481098, 141885909, 153124402, 141885928, 154529217, 141885843, 161553255, 114053988, 134917513, 139090133, 140481100, 151608324, 140481103, 152999208, 140481109, 159953718, 90009530, 106474688, 109767717, 110865309, 119646782, 110865387, 120744461, 110865309, 126232845, 121458588, 143676613, 148120133, 149601399, 161451009, 149601418, 162932226, 149601334, 170338227, 109529635, 129565455, 133572702, 134908447, 145594247, 134908441, 146929962, 134908442, 153608606, 109529638, 129565534, 133572711, 134908359, 145594235, 134908444, 146929975, 134908432, 153608601, 108445186, 128282630, 132250205, 133572707, 144152725, 133572634, 145475211, 133572699, 152087737, 93888885, 111063740, 114498711, 115643687, 124803507, 115643690, 125948572, 115643692, 131673501, 126693466, 149869010, 154504217, 156049253, 168409502, 156049258, 169954615, 156049243, 177679748, 114250371, 135149810, 139329709, 140723005, 151869297, 140722994, 153262671, 140722997, 160229073, 114250374, 135149833, 139329713, 140723011, 151869366, 140723012, 153262676, 140723002, 160229151, 113119186, 133811630, 137950220, 139329706, 150365707, 139329718, 151745143, 139329706, 158642717, 85354161, 100967805, 104090505, 105131410, 113458647, 105131412, 114499556, 105131337, 119704072, 115176729, 136245554, 140459378, 141863991, 153100741, 141863994, 154505328, 141863938, 161528228, 103864764, 122864379, 126664302, 127930957, 138064080, 127930875, 139330730, 127930948, 145663945, 103864742, 122864655, 126664302, 127930875, 138064095, 127930944, 139330729, 127930951, 145663946, 102836315, 121647919, 125410212, 126664319, 136697042, 126664312, 137951222, 126664318, 144221648, 49867761, 58989886, 60814233, 61422443, 66287590, 61422375, 66895718, 61422453, 69936452, 67291283, 79600737, 82062603, 82883158, 89448242, 82883230, 90268852, 82883241, 94371977, 60682329, 71782833, 74002905, 74742934, 80663163, 74742932, 81403196, 74742875, 85103253, 60682407, 71782828, 74002917, 74742861, 80663162, 74742930, 81403113, 74742941, 85103335, 60081584, 71072114, 73270202, 74002912, 79864510, 74002907, 80597221, 74002905, 84260648, 88396527, 104566597, 107800533, 108878604, 117502647, 108878538, 118580648, 108878538, 123970684, 119281980, 141101846, 145465802, 146920472, 158557711, 146920474, 160012388, 146920472, 167285657, 107566731, 127243633, 131179012, 132490800, 142985112, 132490801, 144296896, 132490805, 150855851, 107566800, 127243651, 131179015, 132490722, 142985112, 132490801, 144296907, 132490795, 150855835, 106501788, 125983808, 129880204, 131178934, 141569409, 131179013, 142868221, 131179012, 149362217, 86130112, 101885619, 105036706, 106087078, 114490005, 106087082, 115540293, 106087064, 120792190, 116223717, 137484129, 141736216, 143153577, 154492382, 143153581, 155909822, 143153576, 162996623, 104808908, 123981165, 127815720, 129093861, 139319106, 129093867, 140597193, 129093878, 146988052, 104808910, 123981165, 127815701, 129093862, 139319105, 129093789, 140597276, 129093868, 146987973, 103771192, 122753715, 126550200, 127815706, 137939642, 127815703, 139205231, 127815714, 145532727, 86885594, 102779269, 105958017, 107017585, 115494223, 107017590, 116553723, 107017588, 121851695, 117243124, 138690033, 142979333, 144409192, 155847555, 144409210, 157277263, 144409215, 164426297, 105728192, 125068704, 128936747, 130226100, 140541070, 130226185, 141830487, 130226100, 148277321, 105728200, 125068710, 128936800, 130226169, 140541036, 130226141, 141830403, 130226168, 148277317, 104681393, 123830337, 127660217, 128936734, 139149629, 128936799, 140426221, 128936818, 146809148, 92173857, 109034902, 112407033, 113531179, 122523736, 113531172, 123647733, 113531187, 129268162, 124379027, 147131371, 151681812, 153198635, 165333098, 153198550, 166849944, 153198550, 174434055, 112163306, 132680979, 136784433, 138152323, 149095076, 138152329, 150462873, 138152360, 157302177, 112163306, 132680979, 136784501, 138152277, 149095113, 138152349, 150462942, 138152277, 157302176, 111052794, 131367308, 135430204, 136784434, 147618915, 136784518, 148973226, 136784503, 155744724, 87641047, 103672857, 106879274, 107948025, 116498426, 107948102, 117567153, 107948108, 122911192, 118262483, 139895941, 144222612, 145664758, 157202641, 145664837, 158644865, 145664840, 165855997, 106647429, 126156172, 130057903, 131358411, 141763124, 131358490, 143063698, 131358411, 149566579, 106647502, 126156174, 130057902, 131358411, 141763108, 131358495, 143063613, 131358491, 149566568, 105591597, 124907114, 128770206, 130057901, 140359527, 130057910, 141647208, 130057916, 148085724, 91418396, 108141176, 111485733, 112600659, 121519529, 112600670, 122634372, 112600657, 128208661, 123359668, 145925454, 150438609, 151943007, 163977998, 151943005, 165482455, 151942987, 173004386, 111243939, 131593506, 135663402, 137019966, 147873101, 137020045, 149229732, 137020049, 156012828, 111244023, 131593513, 135663333, 137020048, 147873099, 137020046, 149229732, 137020031, 156012912, 110142515, 130290609, 134320211, 135663334, 146409009, 135663406, 147752210, 135663403, 154468225, 83108270, 98310891, 101351499, 102365036, 110473290, 102364947, 111486656, 102365026, 116554209, 112146168, 132660434, 136763420, 138131048, 149072099, 138131049, 150439753, 138131033, 157277901, 101131686, 119631297, 123331250, 124564561, 134431057, 124564561, 135664369, 124564545, 141830997, 101131690, 119631374, 123331302, 124564628, 134431055, 124564545, 135664394, 124564545, 141831000, 100130388, 118446906, 122110209, 123331234, 133100121, 123331312, 134321219, 123331323, 140426648, 49418563, 58458510, 60266498, 60869165, 65690409, 60869186, 66293152, 60869182, 69306475, 66685139, 78883718, 81323415, 82136631, 88642508, 82136649, 89455739, 82136631, 93521912, 60135790, 71136226, 73336311, 74069595, 79936561, 74069677, 80669932, 74069672, 84336663, 60135795, 71136226, 73336320, 74069595, 79936564, 74069665, 80669853, 74069684, 84336742, 59540400, 70431830, 72610220, 73336307, 79145118, 73336310, 79871143, 73336304, 83501727, 87600223, 103624622, 106829506, 107897813, 116444148, 107897741, 117512373, 107897819, 122853843, 118207434, 139830714, 144155390, 145596886, 157129378, 145596965, 158570863, 145596970, 165778700, 106597806, 126097317, 129997309, 131297294, 141697063, 131297278, 142997020, 131297288, 149496813, 106597820, 126097382, 129997322, 131297205, 141697048, 131297277, 142997020, 131297278, 149496878, 105542605, 124848896, 128710222, 129997311, 140294042, 129997299, 141581221, 129997302, 148016648, 85354239, 100967800, 104090517, 105131337, 113458636, 105131409, 114499540, 105131406, 119704070, 115176748, 136245554, 140459409, 141863999, 153100745, 141863995, 154505263, 141864015, 161528307, 103864762, 122864307, 126664316, 127930940, 138064084, 127930943, 139330653, 127930951, 145663936, 103864752, 122864376, 126664233, 127930893, 138064027, 127930875, 139330737, 127930948, 145663940, 102836384, 121647913, 125410133, 126664326, 136697042, 126664313, 137951218, 126664299, 144221737, 86102821, 101853404, 105003503, 106053467, 114453828, 106053546, 115503858, 106053467, 120754014, 116186968, 137440678, 141691333, 143108326, 154443615, 143108329, 155860547, 143108246, 162945112, 104775769, 123942046, 127775233, 129053002, 139275017, 129053001, 140552769, 129053001, 146941513, 104775780, 123942056, 127775299, 129053214, 139275001, 129053058, 140552837, 129052992, 146941596, 103738315, 122714895, 126510200, 127775318, 137896127, 127775299, 139161219, 127775310, 145486737, 91343441, 108052672, 111394512, 112508456, 121419997, 112508389, 122533873, 112508461, 128103665, 123258648, 145805874, 150315406, 151818564, 163843793, 151818570, 165346945, 151818571, 172862705, 111152906, 131485745, 135552317, 136907838, 147751931, 136907820, 149107535, 136907824, 155885063, 111152917, 131485743, 135552302, 136907820, 147752014, 136907820, 149107531, 136907839, 155885063, 110052380, 130183908, 134210201, 135552234, 146289109, 135552299, 147631219, 135552311, 154341721, 86851559, 102739012, 105916447, 106975597, 115448950, 106975597, 116508157, 106975669, 121803966, 117197217, 138635709, 142923333, 144352607, 155786437, 144352642, 157215739, 144352566, 164361897, 105686785, 125019720, 128886317, 130175095, 140486056, 130175171, 141774929, 130175095, 148219247, 105686789, 125019716, 128886233, 130175178, 140486070, 130175161, 141775082, 130175095, 148219242, 104640400, 123781914, 127610133, 128886299, 139095120, 128886302, 140371143, 128886310, 146751721, 90594864, 107167075, 110481502, 111586325, 120424759, 111586331, 121529652, 111586247, 127053730, 122248411, 144610899, 149083417, 150574173, 162500913, 150574166, 163991739, 150574235, 171445898, 110241901, 130407975]">
+        </p>
+       </all>
+      </main>
+      <nav aria-label="Page navigation" class="nav-wrapper">
+       <!-- Mobile navigation buttons -->
+       <a aria-keyshortcuts="Left" aria-label="Previous chapter" class="mobile-nav-chapters previous" href="6.html" rel="prev" title="Previous chapter">
+        <i class="fa fa-angle-left">
+        </i>
+       </a>
+       <a aria-keyshortcuts="Right" aria-label="Next chapter" class="mobile-nav-chapters next" href="8.html" rel="next prefetch" title="Next chapter">
+        <i class="fa fa-angle-right">
+        </i>
+       </a>
+       <div style="clear: both">
+       </div>
+      </nav>
+     </div>
+    </div>
+    <nav aria-label="Page navigation" class="nav-wide-wrapper">
+     <a aria-keyshortcuts="Left" aria-label="Previous chapter" class="nav-chapters previous" href="6.html" rel="prev" title="Previous chapter">
+      <i class="fa fa-angle-left">
+      </i>
+     </a>
+     <a aria-keyshortcuts="Right" aria-label="Next chapter" class="nav-chapters next" href="8.html" rel="next prefetch" title="Next chapter">
+      <i class="fa fa-angle-right">
+      </i>
+     </a>
+    </nav>
+   </div>
+   <script>
+    window.playground_copyable = true;
+   </script>
+   <script src="elasticlunr.min.js">
+   </script>
+   <script src="mark.min.js">
+   </script>
+   <script src="searcher.js">
+   </script>
+   <script src="clipboard.min.js">
+   </script>
+   <script src="highlight.js">
+   </script>
+   <script src="book.js">
+   </script>
+   <!-- Custom JS scripts -->
+   <script src="recompute.js">
+   </script>
+  </div>
+ </body>
+</html>
