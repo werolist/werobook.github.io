@@ -20,8 +20,6 @@ for (let i = 0; i < all_tags.length; i++) {
 }
 
 function refresh() {
-    const all = document.getElementsByTagName("all");
-    console.log(all);
 
     for (ele of elements) {
         for (inpboxname of inpboxes) {
@@ -54,8 +52,9 @@ function refresh() {
             ele.innerText = ords;
         }
     }
+    const all = document.getElementsByTagName("all");
 
-    if(all) {
+    if(all && all.hidden) {
         console.log(5);
         all.hidden = false;
     }
