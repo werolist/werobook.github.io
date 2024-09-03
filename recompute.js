@@ -54,8 +54,8 @@ function refresh() {
     }
     const all = document.getElementsByTagName("all");
 
-    if(all) {
-        console.log(all[0].hidden);
+    if(all && all[0].hidden) {
+        all[0].hidden = false;
     }
 }
 
