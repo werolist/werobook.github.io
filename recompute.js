@@ -58,6 +58,7 @@ function refresh() {
     }
 
     if(all) {
+        console.log(5);
         all.hidden = false;
     }
 }
