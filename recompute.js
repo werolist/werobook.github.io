@@ -55,7 +55,7 @@ function refresh() {
     const all = document.getElementsByTagName("all");
 
     if(all) {
-        console.log(all.getAttribute("hidden"));
+        console.log(all);
     }
 }
 
