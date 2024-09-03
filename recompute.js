@@ -56,7 +56,7 @@ function refresh() {
 
     if(all && all.hidden) {
         console.log(5);
-        all.hidden = false;
+        all.hidden = "false";
     }
 }
 
