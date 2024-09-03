@@ -4,8 +4,6 @@ const exempts = ["1", "i1", "i2", "i3", "h"];
 const all_tags = ["p", "h1", "h2", "h3", "summary", "code", "title", "a"];
 
 const inpboxes = ["i1", "i2", "i3", "i4"];
-const all = document.getElementById("all");
-console.log(all);
 
 for (inpboxname of inpboxes) {
     if (!window.sessionStorage.getItem(inpboxname)) {
@@ -22,9 +20,8 @@ for (let i = 0; i < all_tags.length; i++) {
 }
 
 function refresh() {
-    if (document.getElementById("h") && document.getElementById("h").hidden) {
-        document.getElementById("h").hidden = false;
-    }
+    const all = document.getElementById("all");
+    console.log(all);
 
     for (ele of elements) {
         for (inpboxname of inpboxes) {
