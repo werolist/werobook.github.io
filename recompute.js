@@ -4,7 +4,8 @@ const exempts = ["1", "i1", "i2", "i3", "h"];
 const all_tags = ["p", "h1", "h2", "h3", "summary", "code", "title", "a"];
 
 const inpboxes = ["i1", "i2", "i3", "i4"];
-const all = document.getElementById("all")
+const all = document.getElementById("all");
+console.log(all);
 
 for (inpboxname of inpboxes) {
     if (!window.sessionStorage.getItem(inpboxname)) {
