@@ -20,7 +20,7 @@ for (let i = 0; i < all_tags.length; i++) {
 }
 
 function refresh() {
-    const all = document.getElementById("all");
+    const all = window.getElementById("all");
     console.log(all);
 
     for (ele of elements) {
